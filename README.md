@@ -11,7 +11,7 @@ Get all your phone notifications instantly synced to Steam Deck. Based on [KDE C
 To start using KDE Connect features you need to pair your devices. Open your KDE Connect application, find Steam Deck and request pairing.
 
 Due to lack of actions in SteamOS notifications you need click ugly `Click to accept` link inside notification to accept incoming request.
-Notification will dismiss in 15 second. Just ignore notification in case you want to discard pairing.
+Notification will dismiss in 15 seconds. Just ignore notification in case you want to discard pairing.
 
 ![](assets/pairing.jpg)
 
