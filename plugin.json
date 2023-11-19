@@ -1,10 +1,10 @@
 {
   "name": "Decky Notifications",
   "author": "f1remoon",
-  "flags": ["debug"],
+  "flags": [],
   "publish": {
-    "tags": ["template"],
-    "description": "Receive notifications from smartphone.",
-    "image": ""
+    "tags": ["KDE Connect", "Notifications"],
+    "description": "Receive notifications from smartphone using KDE Connect Protocol",
+    "image": "https://github.com/Firemoon777/decky-notifications/blob/f39f532b3d435fb2cb71ccf201078872478bb6a0/assets/cover.png"
   }
 }

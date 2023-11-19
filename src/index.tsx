@@ -108,15 +108,17 @@ const Content: VFC<{ serverAPI: ServerAPI }> = ({serverAPI}) => {
         let untrust = async () => {
           await serverAPI.callPluginMethod("trust_device", {device_id: dev.deviceId, trust: false})
         }
+        /*
+                      <MenuItem onSelected={() => {}}>Local fingerprint: {(await serverAPI.callPluginMethod<any, string>("local_fingerprint", {})).result}</MenuItem>
+                      <MenuItem onSelected={() => {this.cancel()}}>Remote fingerprint:<br/>{dev.fingerprint}</MenuItem>
+        */
         content.push(
           <PanelSectionRow>
             <ButtonItem
               layout="below"
               onClick={async (e) => {
                   showContextMenu(
-                    <Menu label="Menu" cancelText="Close" onCancel={() => {}}>
-                      <MenuItem onSelected={() => {}}>Local fingerprint: {(await serverAPI.callPluginMethod<any, string>("local_fingerprint", {})).result}</MenuItem>
-                      <MenuItem onSelected={() => {this.cancel()}}>Remote fingerprint:<br/>{dev.fingerprint}</MenuItem>
+                    <Menu label={dev.name} cancelText="Close" onCancel={() => {}}>
                       <MenuItem onSelected={untrust}>Remove device</MenuItem>
                     </Menu>,
                     e.currentTarget ?? window
@@ -195,7 +197,7 @@ export default definePlugin((serverApi: ServerAPI) => {
   }, 1000)
 
   return {
-    title: <div className={staticClasses.Title}>Example Plugin</div>,
+    title: <div className={staticClasses.Title}>Decky Notifications</div>,
     content: <Content serverAPI={serverApi} />,
     onDismount() {
       clearInterval(interval);
