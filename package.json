@@ -1,6 +1,6 @@
 {
   "name": "decky-notifications",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Lightweight KDE Connect Protocol implemetation for SteamOS. Allows to receive notifications from smartphone. Requires KDE Connect application.",
   "scripts": {
     "build": "shx rm -rf dist && rollup -c",
