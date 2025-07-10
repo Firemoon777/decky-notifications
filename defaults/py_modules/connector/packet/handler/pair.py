@@ -21,6 +21,7 @@ logger = logging.getLogger(__name__)
 @dataclass
 class KDEPacketPairBody:
     pair: bool
+    timestamp: int = time.time()
 
 
 @dataclass
@@ -33,7 +34,8 @@ class KDEPacketPair(KDEPacketBase):
     def create(cls, pair: bool):
         return cls(
             body=KDEPacketPairBody(
-                pair=pair
+                pair=pair,
+                timestamp=time.time()
             )
         )
 
