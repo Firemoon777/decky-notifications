@@ -34,6 +34,8 @@ class KDEPacketIdentityBody:
     outgoingCapabilities: List[str]
     protocolVersion: int = KDE_CONNECT_PROTOCOL_VERSION
     tcpPort: int = KDE_CONNECT_TCP_PORT
+    targetDeviceId: str | None = None  # Sent by newer KDE Connect versions
+    targetProtocolVersion: int | None = None  # Sent by newer KDE Connect versions
 
 
 @dataclass
