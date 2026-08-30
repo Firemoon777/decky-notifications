@@ -59,6 +59,7 @@ class PacketRegistry:
             packet.body = packet.__annotations__["body"](**packet.body)
         except Exception as e:
             logger.exception(e)
+            return None  # Prevent processing packets with invalid body
 
         return await func(packet, context=context)
 
